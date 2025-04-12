@@ -1,0 +1,30 @@
+spring:
+  application.name: security1
+  shell:
+    script:
+      enabled: true
+    interactive:
+      enabled: true
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: DEBUG
+
+application:
+  basePath: /home/eoulis/Documents/myfiles
+
+
+genapplica:
+  files:
+    encryption:
+      keyMetadata: 'user:encryption used'
+      saltMetadata: 'user:encryption salt'
+      macMetadata: 'user:encryption mac'
+  security:
+    keyAlgorithm: PBEWITHSHA256AND256BITAES-CBC-BC
+    iterations: 1200
+    keyLength: 256
+    aesNivbits: 128
+    macAlgorithm: HmacSHA256
