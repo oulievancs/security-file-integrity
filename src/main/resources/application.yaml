@@ -13,7 +13,7 @@ logging:
     root: DEBUG
 
 application:
-  basePath: /home/eoulis/Documents/myfiles
+  basePath: /home/${USER}
 
 
 genapplica:
